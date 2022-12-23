@@ -16,6 +16,17 @@ use app\model\Book;
 use app\model\Chapter;
 class PostBot extends BaseController
 {
+    protected $chapterService;
+
+    protected $photoService;
+
+    public function initialize()
+    {
+        parent::initialize();
+        $this->chapterService = app('chapterService');
+        $this->photoService = app('photoService');
+    }
+
     public function save()
     {
         if (request()->isPost()) {
@@ -129,6 +140,7 @@ class PostBot extends BaseController
             $chapterlog->chapter_id = $chapter->id;
             $chapterlog->src_url = $data["src_url"];
             $chapterlog->save();
+            // replace src -> data-original
             $preg = '/\bsrc\b\s*=\s*[\'\"]?([^\'\"]*)[\'\"]?/i';
             preg_match_all($preg, $data['images'], $img_urls);
             $lastOrder = 0;

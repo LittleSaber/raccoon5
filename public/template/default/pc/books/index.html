@@ -25,7 +25,7 @@
                 <p class="subtitle">别名：{$book.nick_name}</p>
                 <p class="subtitle">作者：{$book.author.author_name}</p>
                 <p class="tip">
-                    <span class="block">状态：<span>{$book.end == 2 ? '已完结':'连载中'}</span></span>
+                    <span class="block">状态：<span>{$book.end == 1 ? '已完结':'连载中'}</span></span>
                     <span class="block ticai">地区：<a href="/{$booklist_act}/?area={$book.area_id}" target="_blank">{$book.area.area_name}</a></span>
                     <span class="block">更新时间：{$book.last_time|date='Y-m-d'}</span>
                     <span class="block">点击：{$clicks}</span>
