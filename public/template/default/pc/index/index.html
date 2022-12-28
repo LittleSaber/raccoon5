@@ -93,6 +93,7 @@
     </div>
 </div>
 
+<!-- TODO 热门漫画
 <div class="index-title">
     <div class="container">
         <img src="/static/images/index-title-1.png" class="index-title-logo">
@@ -150,58 +151,60 @@
         </div>
     </div>
 </div>
-
-<section class="box container overflow-Show">
-    <header class="box-header"><i class="icon icon-cat"></i>
-        <h2>热门分类</h2>
-        <ul class="cat-tabs js-tabs">
-            {volist name="tags" id="vo"}
-            {in name="$vo.id" value="1,2,3"} <!-- value里的数字是后台分类ID，填哪几个数字就展示哪几个分类，必须和下面一致 -->
-            <li><a onclick="switchTag(this)" class="{$i == 1 ? 'active' : ''}" data-val="{$i}">{$vo.tag_name}</a></li>
-            {/in}
-            {/volist}
-        </ul>
-        <div class="pull-right">
-            <a class="more" href="/{$booklist_act}?end=1">更多<i class="icon icon-arrow"></i></a>
-        </div>
-    </header>
-    <div class="box-body">
-        <section class="box-con-8n3">
-            <div class="box-8n3-pane js_box_pane active">
-                {volist name="catelist" id="cateItem" key="k"}
-                {in name="$cateItem.tag.id" value="1,2,3"} <!-- value里的数字是后台分类ID，填哪几个数字就展示哪几个分类，必须和上面一致 -->
-                <ul class="mh-list col7 switch-books" style="display: {$k == 1? 'block' : 'none'};" data-val="{$k}">
-                    {volist name="cateItem.books" id="vo" length="14"}
-                    <li>
-                        <div class="mh-item">
-                            <a href="/{$book_ctrl}/{$vo.param}">
-                                <p class="mh-cover " style="background-image: url({$vo.cover_url})"></p>
-                            </a>
+-->
 
 
-                            <div class="mh-item-detali">
-                                <h2 class="title">
-                                    <a href="/{$book_ctrl}/{$vo.param}">
-                                        {$vo.book_name}
-                                    </a>
+<!--<section class="box container overflow-Show">-->
+<!--    <header class="box-header"><i class="icon icon-cat"></i>-->
+<!--        <h2>热门分类</h2>-->
+<!--        <ul class="cat-tabs js-tabs">-->
+<!--            {volist name="tags" id="vo"}-->
+<!--            {in name="$vo.id" value="1,2,3"} &lt;!&ndash; value里的数字是后台分类ID，填哪几个数字就展示哪几个分类，必须和下面一致 &ndash;&gt;-->
+<!--            <li><a onclick="switchTag(this)" class="{$i == 1 ? 'active' : ''}" data-val="{$i}">{$vo.tag_name}</a></li>-->
+<!--            {/in}-->
+<!--            {/volist}-->
+<!--        </ul>-->
+<!--        <div class="pull-right">-->
+<!--            <a class="more" href="/{$booklist_act}?end=1">更多<i class="icon icon-arrow"></i></a>-->
+<!--        </div>-->
+<!--    </header>-->
+<!--    <div class="box-body">-->
+<!--        <section class="box-con-8n3">-->
+<!--            <div class="box-8n3-pane js_box_pane active">-->
+<!--                {volist name="catelist" id="cateItem" key="k"}-->
+<!--                {in name="$cateItem.tag.id" value="1,2,3"} &lt;!&ndash; value里的数字是后台分类ID，填哪几个数字就展示哪几个分类，必须和上面一致 &ndash;&gt;-->
+<!--                <ul class="mh-list col7 switch-books" style="display: {$k == 1? 'block' : 'none'};" data-val="{$k}">-->
+<!--                    {volist name="cateItem.books" id="vo" length="14"}-->
+<!--                    <li>-->
+<!--                        <div class="mh-item">-->
+<!--                            <a href="/{$book_ctrl}/{$vo.param}">-->
+<!--                                <p class="mh-cover " style="background-image: url({$vo.cover_url})"></p>-->
+<!--                            </a>-->
 
-                                </h2>
-                                <p class="zl"><span>评分:</span><span class="mh-star-line star-4"></span></p>
-                                <p class="chapter">
-                                    {$vo.summary}
-                                </p>
-                            </div>
-                        </div>
-                    </li>
-                    {/volist}
-                </ul>
-                {/in}
-                {/volist}
-            </div>
-        </section>
-    </div>
-    <footer></footer>
-</section>
+
+<!--                            <div class="mh-item-detali">-->
+<!--                                <h2 class="title">-->
+<!--                                    <a href="/{$book_ctrl}/{$vo.param}">-->
+<!--                                        {$vo.book_name}-->
+<!--                                    </a>-->
+
+<!--                                </h2>-->
+<!--                                <p class="zl"><span>评分:</span><span class="mh-star-line star-4"></span></p>-->
+<!--                                <p class="chapter">-->
+<!--                                    {$vo.summary}-->
+<!--                                </p>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </li>-->
+<!--                    {/volist}-->
+<!--                </ul>-->
+<!--                {/in}-->
+<!--                {/volist}-->
+<!--            </div>-->
+<!--        </section>-->
+<!--    </div>-->
+<!--    <footer></footer>-->
+<!--</section>-->
 <script>
     function switchTag(obj){
         var i = $(obj).attr('data-val');
@@ -219,6 +222,7 @@
 </script>
 
 <!-- 热门排行 -->
+<!-- TODO
 <div class="container">
     <div class="index-rank">
         <div class="index-rank-title">新书榜<a href="/{$rank_ctrl}" class="more">更多</a></div>
@@ -297,7 +301,7 @@
         </ul>
     </div>
 </div>
-
+-->
 
 <section class="box container overflow-Show">
     <header class="box-header"><i class="icon icon-end"></i>
